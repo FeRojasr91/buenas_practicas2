@@ -1,0 +1,22 @@
+{
+  "name": "buenas_practicas2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FeRojasr91/buenas_practicas2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FeRojasr91/buenas_practicas2/issues"
+  },
+  "homepage": "https://github.com/FeRojasr91/buenas_practicas2#readme",
+  "dependencies": {
+    "cypress": "^14.0.0"
+  }
+}
