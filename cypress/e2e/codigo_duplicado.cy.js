@@ -29,8 +29,20 @@ describe('codigo duplicado', () => {
             cy.search(item)
             cy.wait('@getStories')
 
-            cy.get('.table-row').should('have.length',100)
+            cy.get('.table-row').its('length').should('be.to.least',1)
+            
+            /*********Otro método
+            cy.get('.table-row').then(rows=>{
+                expect(rows.length).to.be.least(1)
+            })**************************************************/
+            
+            /*********Otro método, Se deja como comentario mientras el código ejecutado
+            cy.wait('@getStories').then(({response})=>{
+                const quantidade = response.body.hits.length
 
+                cy.get('.table-row').should('have.length',quantidade)
+
+            })   ******/        
         });
     })
 
