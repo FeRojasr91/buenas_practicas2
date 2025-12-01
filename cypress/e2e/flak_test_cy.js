@@ -27,7 +27,12 @@ describe('Flak Teste', () =>{
              cy.get('select[name="course"]').select('git-it')
 
              cy.get('input[type="submit"]').click()
-             cy.get('input[value="Saved!"]',{timeout:3000}).should('be.visible')
+             cy.get('input[value="Saved!"]',{timeout:7000}).should('be.visible')
+
+             cy.get('li').should('contain', ' core - git-it')
+
+             //De primeras, se detecta que hay test que pasan y otros dan error (ya que se corren 10 iteraciones).
+             //Ahora agregando  7 segundos de timeout, en vez de 3 segundos, se valida que pasen todos
         
 
         });
